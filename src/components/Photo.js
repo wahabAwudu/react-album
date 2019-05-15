@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Proptypes from "prop-types";
 import { Link } from "react-router-dom";
-
 class Photo extends Component {
   static propTypes = {
     image: Proptypes.string.isRequired,
@@ -23,12 +22,12 @@ class Photo extends Component {
             <div className="card card-body mb-3">
               <div className="row">
                 <div className="col-xs-4">
-                  <Link to={"/photos/" + id}>
+                  <Link to={"/" + id}>
                     <img src={image} alt="img" />
                   </Link>
                 </div>
                 <div className="col-xs-8">
-                  <Link to={"/photos/" + id}>
+                  <Link to={"/" + id}>
                     <p className="text-primary">{title}</p>
                   </Link>
                 </div>

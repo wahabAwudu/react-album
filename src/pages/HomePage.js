@@ -1,15 +1,12 @@
-import React, { Component } from "react";
-
+import React from "react";
 import Photos from "../components/Photos";
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div>
-        <Photos />
-      </div>
-    );
-  }
-}
+const HomePage = props => {
+  return (
+    <div>
+      <Photos />
+    </div>
+  );
+};
 
 export default HomePage;
