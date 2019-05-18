@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
-import Provider from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 // pages
 import HomePage from "./pages/HomePage";
@@ -12,7 +13,7 @@ import AddPhoto from "./components/AddPhoto";
 const App = () => {
   return (
     <div className="App">
-      <Provider>
+      <Provider store={store}>
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
